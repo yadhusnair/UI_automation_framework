@@ -1,0 +1,97 @@
+# Deployment Manager Test Configuration
+
+[deployment_manager]
+# URL for the DM application
+url = "https://qa_dm.atimotors.com/am/login"
+#url = "https://192.168.6.12/am"
+
+[browser]
+# Browser headless mode (true/false)
+headless = false
+# Browser type: chromium, firefox, webkit
+type = "chromium"
+# Browser launch arguments
+slow_mo = 0
+# Viewport resolution for MapEditor and other tests requiring fixed coordinates
+viewport_width = 1280
+viewport_height = 720
+
+[timeouts]
+# Page load timeout in milliseconds
+page_load = 30000
+# Element wait timeout in milliseconds
+element_wait = 5000
+# Default timeout
+default = 10000
+
+[logging]
+# Log level: TRACE, DEBUG, INFO, WARN, ERROR
+level = "INFO"
+# Enable console output
+console = true
+
+[email]
+# Enable/disable email reporting
+enabled = true
+
+[email.smtp]
+# SMTP server configuration
+host = "smtp.gmail.com"
+port = 587
+auth = true
+starttls = true
+
+[email.sender]
+# Sender email address
+address = "yadhusnairofficial@gmail.com"
+# Sender password (use environment variable in production: EMAIL_PASSWORD)
+password = "${EMAIL_PASSWORD}"
+
+[email.recipients]
+# Email recipients for reports (list)
+to = [
+    "yadhusnair009@gmail.com"
+]
+
+[email.report]
+# Email subject template - uses {suite} and {timestamp} placeholders
+subject = "Automation Test Report - {suite} - {timestamp}"
+# Include report attachment
+attach_report = true
+
+[test_suites]
+# Define test suites - each suite contains an array of test methods
+# Format: fully.qualified.ClassName.testMethodName
+
+[test_suites.smoke]
+# Quick smoke tests
+tests = [
+    "org.example.tests.MapPageTest.testV2MapImportWithVerification"
+]
+
+[test_suites.regression]
+# Comprehensive regression tests
+tests = [
+    "org.example.tests.MapPageTest.testV2MapImportWithVerification"
+]
+
+[test_suites.full]
+# Full test suite
+tests = [
+    "org.example.tests.MapPageTest.testV2MapImportWithVerification"
+]
+
+[database]
+# Database connection (if needed in future)
+host = "localhost"
+port = 5432
+name = "test_db"
+username = "testuser"
+password = "${DB_PASSWORD}"
+
+[reports]
+# Report generation settings
+dir = "target/test-reports"
+format = "html"
+# Enable detailed logs in report
+detailed = true

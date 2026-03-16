@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <theme>dark</theme>
+
+        <!-- document encoding -->
+        <encoding>utf-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Deployment Manager Test Report</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        <reportName>Deployment Manager Automation Test Report</reportName>
+
+        <!-- report headline - displayed at top-nav, after reportHeadline -->
+        <reportHeadline>Test Execution Summary</reportHeadline>
+
+        <!-- global date format override -->
+        <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+
+        <!-- global time format override -->
+        <timeFormat>HH:mm:ss</timeFormat>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Add custom JS if needed
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                .custom-class {
+                    /* Add custom CSS if needed */
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

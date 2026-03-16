@@ -1,0 +1,2 @@
+rootProject.name = 'deployment_manager_testing'
+include 'app'

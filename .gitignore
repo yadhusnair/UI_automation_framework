@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+.idea
+out
+api-core/target
+fm-api/target
+logs/
+/.gradle
+/build
+/.vscode/
+/node_modules
+/app/build/
+/app/target/
+/test_result/

@@ -1,0 +1,28 @@
+{
+  "mapsV2": [
+    {
+      "name": "renewsys_demo",
+      "file": "renewsys_demo.zip"
+    },
+    {
+      "name": "new_adient",
+      "file": "new_adient.zip"
+    }
+  ],
+  "empty_map": [
+    {
+      "name": "map_editor_testing_new",
+      "file": "map_editor_testing_new.zip"
+    }
+  ],
+  "mapsV4": [
+    {
+      "name": "",
+      "file": ""
+    },
+    {
+      "name": "",
+      "file": ""
+    }
+  ]
+}

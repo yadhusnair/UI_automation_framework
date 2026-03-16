@@ -1,0 +1,362 @@
+{
+    "stations": [
+        {
+            "name": "Station1",
+            "x": -2.704592105828852e-13,
+            "y": 1.388844594885086e-13,
+            "angle": 86.40889672767452,
+            "tags": [
+                "dispatch_not_reqd",
+                "dispatch_optional",
+                "parking",
+                "autounhitch",
+                "inplace",
+                "charging",
+                "hidden",
+                "trolley_hitch_release"
+            ],
+            "isClockwise": true,
+            "customTags": [
+                "park_bezier",
+                "precision_park"
+            ]
+        },
+        {
+            "name": "Station2",
+            "x": -1.4728425863473782,
+            "y": 6.9048972115441645,
+            "angle": 174.99230986663804,
+            "tags": [
+                "dispatch_not_reqd",
+                "inplace"
+            ],
+            "isClockwise": false,
+            "customTags": []
+        },
+        {
+            "name": "Station3",
+            "x": -23.709366298562486,
+            "y": 8.143300771667601,
+            "angle": -3.508378564166833,
+            "tags": [
+                "dispatch_optional",
+                "inplace"
+            ],
+            "isClockwise": false,
+            "customTags": [
+                "custom3"
+            ]
+        },
+        {
+            "name": "Station4",
+            "x": -23.89988730956066,
+            "y": 3.4890807984564347,
+            "angle": -89.94292394943477,
+            "tags": [
+                "parking",
+                "inplace"
+            ],
+            "isClockwise": false,
+            "customTags": [
+                "custom4"
+            ]
+        },
+        {
+            "name": "Station5",
+            "x": -26.828537267135715,
+            "y": -1.3673960229975384,
+            "angle": -92.30194896881187,
+            "tags": [
+                "inplace"
+            ],
+            "isClockwise": true,
+            "customTags": [
+                "custom5"
+            ]
+        },
+        {
+            "name": "Station6",
+            "x": -2.3165784921963732,
+            "y": 0.1140908763617718,
+            "angle": 88.57101379368964,
+            "tags": [
+                "autounhitch",
+                "dispatch_not_reqd"
+            ],
+            "customTags": [
+                "custom6"
+            ]
+        },
+        {
+            "name": "Station7",
+            "x": -17.09552153612488,
+            "y": 0.7645051075363227,
+            "angle": -93.15472625819842,
+            "tags": [
+                "dispatch_optional",
+                "parking"
+            ],
+            "customTags": [
+                "custom7"
+            ]
+        },
+        {
+            "name": "Station8",
+            "x": -12.05779752129822,
+            "y": -9.574459151368648,
+            "angle": -6.076457322105455,
+            "tags": [
+                "inplace",
+                "autounhitch",
+                "dispatch_not_reqd"
+            ],
+            "isClockwise": true,
+            "customTags": [
+                "custom8"
+            ]
+        },
+        {
+            "name": "Station9",
+            "x": -17.13555003069602,
+            "y": 0.4276595318681662,
+            "angle": 90,
+            "tags": [
+                "dispatch_not_reqd",
+                "dispatch_optional"
+            ],
+            "customTags": [
+                "custom9"
+            ]
+        },
+        {
+            "name": "Station10",
+            "x": -20.87071989489156,
+            "y": -8.862167709803487,
+            "angle": -4.042085264731213,
+            "tags": [
+                "parking",
+                "inplace"
+            ],
+            "isClockwise": true,
+            "customTags": [
+                "custom10"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "start_station": "Station1",
+            "end_station": "Station2",
+            "reverse": false
+        },
+        {
+            "start_station": "Station2",
+            "end_station": "Station3",
+            "reverse": true
+        },
+        {
+            "start_station": "Station3",
+            "end_station": "Station4",
+            "reverse": false
+        },
+        {
+            "start_station": "Station4",
+            "end_station": "Station5",
+            "reverse": true
+        },
+        {
+            "start_station": "Station5",
+            "end_station": "Station6",
+            "reverse": false
+        },
+        {
+            "start_station": "Station6",
+            "end_station": "Station7",
+            "reverse": true
+        },
+        {
+            "start_station": "Station7",
+            "end_station": "Station8",
+            "reverse": false
+        },
+        {
+            "start_station": "Station8",
+            "end_station": "Station9",
+            "reverse": true
+        },
+        {
+            "start_station": "Station9",
+            "end_station": "Station10",
+            "reverse": false
+        }
+    ],
+    "Box_Gates": [
+        {
+            "name": "Box_Gate1",
+            "start_x": 738,
+            "start_y": 194,
+            "end_x": 823,
+            "end_y": 288,
+            "width": 10,
+            "height": 10,
+            "angle": 0,
+            "exclusive_parking": true,
+            "apply_distance": 2,
+            "release_distance": 3,
+            "linked_station": "Station1",
+            "station_pose": "Station1"
+        }
+    ],
+    "Line_Gates": [
+        {
+            "name": "Line_Gate1",
+            "start_x": 531,
+            "start_y": 236,
+            "angle": 90,
+            "apply_distance": 2,
+            "exclusive_parking": true,
+            "release_distance": 3,
+            "linked_station": "Station1",
+            "station_pose": "Station1"
+        }
+    ],
+    "Zones": {
+        "LOW_SPEED_ZONES": [
+            {
+                "name": "LOW_SPEED_ZONES-1",
+                "start_x": 163,
+                "start_y": 374,
+                "end_x": 255,
+                "end_y": 522,
+                "width": 10,
+                "height": 10,
+                "angle": 0,
+                "velocity_factor": 1
+            }
+        ],
+        "SPECIAL_CAMERA_ZONES": [
+            {
+                "name": "SPECIAL_CAMERA_ZONES-1",
+                "start_x": 315,
+                "start_y": 431,
+                "end_x": 418,
+                "end_y": 537,
+                "width": 10,
+                "height": 10,
+                "angle": 0,
+                "Entry_heading": 90
+            }
+        ],
+        "RAMP_ZONES": [
+            {
+                "name": "RAMP_ZONES-1",
+                "start_x": 724,
+                "start_y": 373,
+                "end_x": 848,
+                "end_y": 502,
+                "width": 10,
+                "height": 10,
+                "angle": 0,
+                "up_ramp_heading": 90,
+                "gradient_angle": 5
+            }
+        ],
+        "VARIABLE_PADDING_ZONES": [
+            {
+                "name": "VARIABLE_PADDING_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0,
+                "apply_distance": 2,
+                "release_distance": 3,
+                "vehicle_padding": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "payload_padding": [
+                    4,
+                    5
+                ]
+            }
+        ],
+        "OBSTACLE_AVOIDANCE_ZONES": [
+            {
+                "name": "OBSTACLE_AVOIDANCE_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0,
+                "Maximum_offset": 0.5
+            }
+        ],
+        "TRAFFIC_INTERSECTION_ZONES": [
+            {
+                "name": "TRAFFIC_INTERSECTION_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0
+            }
+        ],
+        "NO_GO_ZONES": [
+            {
+                "name": "NO_GO_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0
+            }
+        ],
+        "TABLE_PICKUP_ZONES": [
+            {
+                "name": "TABLE_PICKUP_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0
+            }
+        ],
+        "VARIABLE_STOP_DIST_ZONES": [
+            {
+                "name": "VARIABLE_STOP_DIST_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0
+            }
+        ],
+        "DOCKING_ZONES": [
+            {
+                "name": "DOCKING_ZONES-1",
+                "start_x": 738,
+                "start_y": 194,
+                "end_x": 823,
+                "end_y": 288,
+                "width": 10,
+                "height": 10,
+                "angle": 0
+            }
+        ]
+    }
+}

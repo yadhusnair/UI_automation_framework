@@ -1,0 +1,6 @@
+[
+    {"username":"fakeuser","password":"wrongpassword"},
+    {"username":"nonexistentuser","password":"somepassword"},
+    {"username":"notuser","password":"badpassword"},
+    {"username":"ati_user","password":"userme"}
+]

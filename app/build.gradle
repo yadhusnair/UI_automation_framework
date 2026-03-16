@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:33.1.0-jre'
+
+    testImplementation 'com.microsoft.playwright:playwright:1.56.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    testImplementation 'org.testng:testng:7.11.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Logging
+    testImplementation 'org.slf4j:slf4j-api:2.0.9'
+    testImplementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    // ExtentReports for custom reporting
+    testImplementation 'com.aventstack:extentreports:5.1.1'
+    testImplementation 'com.aventstack:extentreports-testng-adapter:1.2.2'
+
+    // TOML Configuration parsing
+    testImplementation 'com.moandjiezana.toml:toml4j:0.7.2'
+
+    // Email dependencies for email reporting
+    testImplementation 'javax.mail:javax.mail-api:1.6.2'
+    testImplementation 'com.sun.mail:javax.mail:1.6.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.named('test') {
+    useTestNG() {
+        if (project.hasProperty('suite')) {
+            suites file(project.property('suite'))
+        }
+    }
+}
+
+bootRun {
+    mainClass.set('org.example.TodoAppApplication')
+}
